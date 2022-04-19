@@ -14,7 +14,7 @@ namespace OrnekUygulama
     { 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();//Burada uygulamamýz MVC davranýþý sergilemesi için servisi uygulamamýza ekledik.Burada Controller ve View eklendi peki Model; Model bir servis deðil sadece veri tabaný iþlemlerinin yapýldýðý bir katman.
+            services.AddControllersWithViews();//Burada uygulamamiz MVC davraniÅŸini sergilemesi iÃ§in servisi uygulamamiza ekledik.Burada Controller ve View eklendi peki Model; Model bir servis degil sadece veri tabani islemlerinin yapildiÄŸi bir katman.
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -24,19 +24,19 @@ namespace OrnekUygulama
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseRouting();// Gelen requestin rotasý bu middleware de belirleniyor.
+            app.UseRouting();// Gelen requestin rotasÃ½ bu middleware de belirleniyor.
 
-            //Endpoint= yapýlan requestin varýþ noktasý.
-            app.UseEndpoints(endpoints => //Bu uygulamaya yapýlan requestin hangi rotalar/þablonlar eþliðinde gelebileceðinin belirttildiði middleware.
+            //Endpoint= yapilan requestin varis noktasi.
+            app.UseEndpoints(endpoints => //Bu uygulamaya yapilan requestin hangi rotalar/sablonlar esliginde gelebileceginin belirttildigi middleware.
             {
                 //    endpoints.MapGet("/", async context =>
                 //    {
                 //        await context.Response.WriteAsync("Hello World!");
                 //    });
-                endpoints.MapDefaultControllerRoute();//Ýstek yapacaðýmýz temel varsayýlan rotayý belirler.
+                endpoints.MapDefaultControllerRoute();//Istek yapacagimiz temel varsayilan rotayi belirler.
             });
         }
     }
 }
 
-//customize = Özelleþtirmek
+//customize = Ã–zellestirmek
